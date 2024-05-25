@@ -1,27 +1,25 @@
-# NgxTraining
+# Server-side rendering workshop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
+Slides are available at: http://bit.ly/at-ssr-workshop
 
-## Development server
+## How to create your own cloud environment (GitHub Codespace) for this workshop?
+- Go to https://github.dev/alcfeoh/ngx-training/tree/ssr-workshop
+- Then open the terminal view by clicking on the 'problems' panel in the bottom-left corner:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![img_1.png](img_1.png)
+- Then click on "Continue working in GitHub Codespaces":
 
-## Code scaffolding
+![img.png](img.png)
+- This will fork the project into your own GitHub Codespace. Select the kind of virtual machine you want (the first option is fine):
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![img_2.png](img_2.png)
+- Run `npm install` in the terminal. You're all set!
 
-## Build
+## Running it locally
+- You can clone this repository locally if you want. Then run `npm install`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## List of commands used in this project
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- `npm run build`: Compiles our code and outputs it in the `dist` folder. This is a default Angular CLI command.
+- `npm run serve-build-static`: Runs a basic static HTTP server using the code built in the `dist` folder. This is a custom command to run our code without a Node.js backend server.
+- `npm run serve:ssr:ngx-training`: Runs the Node.js server built by Angular SSR. This commands gets added by the Angular SSR CLI schematics (`ng add @angular/ssr`).
